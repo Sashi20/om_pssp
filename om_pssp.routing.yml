@@ -1,0 +1,140 @@
+om_pssp.proposal_form:
+  path: /powersystems/pssp/proposal
+  defaults:
+    _title: 'Power System Simulation Proposal Form'
+    _form: \Drupal\om_pssp\Form\OmPsspProposalForm
+  requirements:
+    _permission: 'om pssp create proposal'
+om_pssp.proposal_pending:
+  path: /powersystems/pssp/manage-proposal/pending
+  defaults:
+    _title: 'Pending Proposals'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_proposal_pending'
+  requirements:
+    _permission: 'om pssp manage proposal'
+om_pssp.proposal_all:
+  path: /powersystems/pssp/manage-proposal/all
+  defaults:
+    _title: 'All Proposals'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_proposal_all'
+  requirements:
+    _permission: 'om pssp manage proposal'
+om_pssp.proposal_approval_form:
+  path: /powersystems/pssp/manage-proposal/approve/{proposal_id}
+  defaults:
+    _title: 'Approve Proposal'
+    _form: \Drupal\om_pssp\Form\OmPsspProposalApprovalForm
+  requirements:
+    _permission: 'om pssp manage proposal'
+om_pssp.proposal_edit_form:
+  path: /powersystems/pssp/manage-proposal/edit
+  defaults:
+    _title: 'Edit Proposal'
+    _form: \Drupal\om_pssp\Form\OmPsspProposalEditForm
+  requirements:
+    _permission: 'om pssp manage proposal'
+om_pssp.proposal_status_form:
+  path: /powersystems/pssp/manage-proposal/status
+  defaults:
+    _title: 'Proposal Status'
+    _form: \Drupal\om_pssp\Form\OmPsspProposalStatusForm
+  requirements:
+    _permission: 'om pssp approve proposal'
+om_pssp.abstract_bulk_approval_form:
+  path: /powersystems/pssp/abstract-approval/bulk
+  defaults:
+    _title: 'Bulk Manage'
+    _form: \Drupal\om_pssp\Form\OmPsspAbstractBulkApprovalForm
+  requirements:
+    _permission: 'om pssp bulk manage abstract'
+om_pssp.abstract:
+  path: /powersystems/pssp/abstract-code
+  defaults:
+    _title: 'Abstract and Power System Simulation Submission'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_abstract'
+  requirements:
+    _permission: 'om pssp upload code'
+om_pssp.upload_abstract_code_form:
+  path: /powersystems/pssp/abstract-code/upload
+  defaults:
+    _title: 'Abstract and Power System Simulation Submission'
+    _form: \Drupal\om_pssp\Form\OmPsspUploadAbstractCodeForm
+  requirements:
+    _permission: 'om pssp upload code'
+om_pssp.download_upload_file:
+  path: /powersystems/pssp/download/resource-file
+  defaults:
+    _title: 'Download resource file'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_download_upload_file'
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.project_files:
+  path: /powersystems/pssp/download/abstract-file/{proposal_id}
+  defaults:
+    _title: 'Download abstract file'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_project_files'
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.download_full_project:
+  path: /powersystems/pssp/full-download/project/{proposal_id}
+  defaults:
+    _title: 'Code Download'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_download_full_project'
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.completed_proposals_all:
+  path: /powersystems/pssp/completed-pssp
+  defaults:
+    _title: 'Completed Power System Simulations'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_completed_proposals_all'
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.progress_all:
+  path: /powersystems/pssp/pssp-progress
+  defaults:
+    _title: 'Power System Simulations in Progress'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::om_pssp_progress_all'
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.run_form:
+  path: /powersystems/pssp/om-pssp-run/{proposal_id?}
+  defaults:
+    _title: 'Download Codes'
+    _form: \Drupal\om_pssp\Form\OmPsspRunForm
+  requirements:
+    _permission: 'om pssp download code'
+om_pssp.settings_form:
+  path: /admin/settings/om-pssp
+  defaults:
+    _title: 'OM PSSP Settings'
+    _form: \Drupal\om_pssp\Form\OmPsspSettingsForm
+  requirements:
+    _permission: 'administer om pssp'
+om_pssp._list_pssp_certificates:
+  path: /powersystems/pssp/certificates
+  defaults:
+    _title: 'List of Power System Simulation Certificates'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::_list_pssp_certificates'
+  requirements:
+    _permission: 'list Power System Simulation certificates'
+om_pssp.generate_pdf:
+  path: /powersystems/pssp/certificates/generate-pdf/{proposal_id}
+  defaults:
+    _title: 'Download Certificate'
+    _form: \Drupal\om_pssp\Form\GeneratePdf
+  requirements:
+    _permission: 'PSSP generate pdf'
+om_pssp._list_pssp_custom_certificates:
+  path: /powersystems/pssp/certificates-custom
+  defaults:
+    _title: 'List of Power System Simulation Custom Certificates'
+    _controller: '\Drupal\om_pssp\Controller\DefaultController::_list_pssp_custom_certificates'
+  requirements:
+    _permission: 'list Power System Simulation custom certificates'
+om_pssp.verify_certificates:
+  path: /powersystems/pssp/certificates/verify/{qr_code?}
+  defaults:
+    _title: 'Certificate Verification'
+    _controller: '\Drupal\om_pssp\Controller\VerifyCertificatesController::verifyCertificates'
+  requirements:
+    _permission: 'PSSP verify certificates'

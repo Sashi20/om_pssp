@@ -1,0 +1,92 @@
+om_pssp.proposal_form:
+  route_name: om_pssp.proposal_form
+  title: 'Power System Simulation Proposal Form'
+  description: 'Power System Simulation Proposal Form'
+om_pssp.proposal_pending:
+  route_name: om_pssp.proposal_pending
+  title: 'Manage Power System Simulation Proposals'
+  description: 'Manage Power System Simulation Proposals'
+om_pssp.proposal_pending_0:
+  route_name: om_pssp.proposal_pending
+  title: 'Pending Proposals'
+  weight: 1
+  description: 'Pending om pssp Proposals Queue'
+om_pssp.proposal_all:
+  route_name: om_pssp.proposal_all
+  title: 'All Proposals'
+  weight: 4
+  description: 'All Proposals'
+om_pssp.proposal_approval_form:
+  route_name: om_pssp.proposal_approval_form
+  title: 'Approve Proposal'
+  description: 'Approve Proposal'
+om_pssp.proposal_edit_form:
+  route_name: om_pssp.proposal_edit_form
+  title: 'Edit Proposal'
+  description: 'Edit Proposal'
+om_pssp.proposal_status_form:
+  route_name: om_pssp.proposal_status_form
+  title: 'Proposal Status'
+  description: 'Proposal Status'
+om_pssp.abstract_bulk_approval_form:
+  route_name: om_pssp.abstract_bulk_approval_form
+  title: 'Bulk Manage'
+  weight: 2
+  description: 'Bulk Mangage'
+om_pssp.abstract:
+  route_name: om_pssp.abstract
+  title: 'Abstract and Power System Simulation Submission'
+  description: 'Abstract Submission'
+om_pssp.upload_abstract_code_form:
+  route_name: om_pssp.upload_abstract_code_form
+  title: 'Abstract and Power System Simulation Submission'
+  weight: 2
+  description: 'Abstract Submission'
+  parent: om_pssp.abstract
+om_pssp.download_upload_file:
+  route_name: om_pssp.download_upload_file
+  title: 'Download resource file'
+  description: 'Download resource file'
+om_pssp.project_files:
+  route_name: om_pssp.project_files
+  title: 'Download abstract file'
+  description: 'Download abstract file'
+om_pssp.download_full_project:
+  route_name: om_pssp.download_full_project
+  title: 'Code Download'
+  description: 'Code Download'
+om_pssp.completed_proposals_all:
+  route_name: om_pssp.completed_proposals_all
+  title: 'Completed Power System Simulations'
+om_pssp.progress_all:
+  route_name: om_pssp.progress_all
+  title: 'Power System Simulations in Progress'
+om_pssp.run_form:
+  route_name: om_pssp.run_form
+  title: 'Download Codes'
+om_pssp.settings_form:
+  route_name: om_pssp.settings_form
+  title: 'OM PSSP Settings'
+  description: 'OM PSSP Settings'
+om_pssp._list_pssp_certificates:
+  route_name: om_pssp._list_pssp_certificates
+  title: 'List of Power System Simulation Certificates'
+  description: 'List of Power System Simulation Certificates'
+om_pssp.generate_pdf:
+  route_name: om_pssp.generate_pdf
+  title: 'Download Certificate'
+  description: 'Download Certificate'
+  parent: om_pssp._list_pssp_custom_certificates
+om_pssp._list_pssp_custom_certificates:
+  route_name: om_pssp._list_pssp_custom_certificates
+  title: 'List of Power System Simulation Custom Certificates'
+  description: 'List of Power System Simulation Custom Certificates'
+om_pssp.generate_pdf_0:
+  route_name: om_pssp.generate_pdf
+  title: 'Download Certificate'
+  description: 'Download Certificate'
+  parent: om_pssp._list_pssp_custom_certificates
+om_pssp.verify_certificates:
+  route_name: om_pssp.verify_certificates
+  title: 'Certificate Verification'
+  parent: om_pssp._list_pssp_certificates

@@ -4,17 +4,17 @@ function generate_pdf()
 	$mpath = drupal_get_path('module', 'om_pssp');
 	require($mpath.'/pdf/fpdf/fpdf.php');
 	require($mpath.'/pdf/phpqrcode/qrlib.php');
-	global $user;
+	$user = \Drupal::currentUser();
 	$x                 = $user->uid;
 	$proposal_id       = arg(4);
-	$query3 = db_query("SELECT * FROM om_pssp_proposal WHERE approval_status=3 AND uid= :uid AND id=:proposal_id", array(
+	$query3 = \Drupal::database()->query("SELECT * FROM om_pssp_proposal WHERE approval_status=3 AND uid= :uid AND id=:proposal_id", array(
 		':uid' => $user->uid,
 		':proposal_id'=>$proposal_id
 	));
 	$data3 = $query3->fetchObject();
 	if($data3){
 	if($data3->uid != $x){
-		drupal_set_message('Certificate is not available','error');
+		\Drupal::messenger()->addError('Certificate is not available');
 		return;
 	}
 	}
@@ -78,7 +78,7 @@ function generate_pdf()
 	$proposal_get_id = 0;
 	$UniqueString    = "";
 	$tempDir         = $path . "/pdf/temp_prcode/";
-	$query           = db_select('om_pssp_qr_code');
+	$query           = \Drupal::database()->select('om_pssp_qr_code');
 	$query->fields('om_pssp_qr_code');
 	$query->condition('proposal_id', $proposal_id);
 	$result          = $query->execute();
@@ -97,9 +97,7 @@ function generate_pdf()
 			":proposal_id" => $proposal_id,
 			":qr_code" => $UniqueString
 		);
-		$result       = db_query($query, $args, array(
-			'return' => Database::RETURN_INSERT_ID
-		));
+		$result       = \Drupal::database()->query($query, $args, $query);
 	} //$DBString == "" || $DBString == "null"
 	else {
 		$UniqueString = $DBString;

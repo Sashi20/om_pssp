@@ -1,0 +1,14 @@
+om_pssp.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    om_pssp_emails:
+      type: string
+    om_pssp_cc_emails:
+      type: string
+    om_pssp_from_email:
+      type: string
+    om_pssp_abstract_upload_extensions:
+      type: string
+    om_pssp_project_files_extensions:
+      type: string

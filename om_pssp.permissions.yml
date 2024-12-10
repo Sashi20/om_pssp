@@ -1,0 +1,48 @@
+'om pssp create proposal':
+  title: 'om pssp create proposal'
+  'restrict access': true
+'om pssp manage proposal':
+  title: 'om pssp manage proposal'
+  'restrict access': true
+'om pssp edit proposal':
+  title: 'om pssp edit proposal'
+  'restrict access': true
+'om pssp approve proposal':
+  title: 'om pssp approve proposal'
+  'restrict access': true
+'om pssp propose solution':
+  title: 'om pssp propose solution'
+  'restrict access': true
+'om pssp approve abstract':
+  title: 'om pssp approve code'
+  'restrict access': true
+'om pssp bulk manage abstract':
+  title: 'om pssp bulk manage abstract'
+  'restrict access': true
+'om pssp bulk delete code':
+  title: 'om pssp bulk delete code'
+  'restrict access': true
+'om pssp upload code':
+  title: 'om pssp upload code'
+  'restrict access': true
+'om pssp download code':
+  title: 'om pssp download code'
+  'restrict access': true
+'administer om pssp':
+  title: 'administer om pssp'
+  'restrict access': true
+'om pssp generate abstract':
+  title: 'om pssp generate abstract'
+  'restrict access': true
+'list Power System Simulation certificates':
+  title: 'list Power System Simulation certificates'
+  description: 'Allows users to list Power System Simulation certificates.'
+'list Power System Simulation custom certificates':
+  title: 'list Power System Simulation custom certificates'
+  description: 'Allows users to list Power System Simulation custom certificates.'
+'PSSP generate pdf':
+  title: 'PSSP Generate pdf'
+  description: 'Allows users to Generate pdf.'
+'PSSP verify certificates':
+  title: 'PSSP verify certificates'
+  description: 'Allows users to verify the contribution.'
